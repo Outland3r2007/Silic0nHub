@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signer.css">
+    <link rel="stylesheet" href="css/rectangle.css">
+    <link rel="stylesheet" href="css/preview.css">
+        <link rel="stylesheet" href="css/searchbar.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/rectangle.css">
+        <link rel="stylesheet" href="css/tapbar.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5/css/framework7-icons.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Outland3r2007/Outland3r/main/resources/favicon.ico">
+        <link rel="manifest" href="manifest.json">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<meta charset="utf-8">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<style>
+    </head>
+    <br>
+    body{
+  margin:0px;
+  background-color:#000000;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  color: black;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 0.8em;
+  color: rgba(255,255,255,0.2);}
+
+</style>
+</head>
+<body>
+</div>
+<br>
+<br>
+<br>
+<center>
+    <input type="text" id="ipa" placeholder="Starfiles IPA ID" required>
+    <input type="text" id="p12" placeholder="Starfiles p12 ID" required>
+    <input type="text" id="mobile" placeholder="Starfiles mobileprovision ID" required>
+    <input type="text" id="password" placeholder="Password" required>
+    <button id="sign_btn" onclick="sign()"">Sign <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+  <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+</svg></button>
+    <br>
+    <br>
+    <br>
+ <center>
+    <a href="https://starfiles.co" class="rectangle" id="r1">Open Starfiles <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#cd00ff" class="bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+</svg></a>
+      <br>
+    <center>
+    <a href="https://twitter.com/StarfilesHelp" class="rectangle" id="r1">Follow Starfiles <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00a9ff" class="bi bi-twitter" viewBox="0 0 16 16">
+  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+</svg></a>
+    <script>
+        console.log("\r\n                    __     ___                     __ \r\n  ___ ________ ____\/ \/_ __|_  |___ __ _  ___ _____\/ \/_\r\n \/ _ `\/ __\/ _ `\/ _  \/ \/\/ \/ __\/(_-<\/  \' \\\/ _ `\/ __\/ __\/\r\n \\_, \/_\/  \\_,_\/\\_,_\/\\_, \/____\/___\/_\/_\/_\/\\_,_\/_\/  \\__\/ \r\n\/___\/              \/___\/                              \r\n")
+
+        var ipa
+        var p12
+        var mobileprovision
+        var password
+
+        function sign() {
+            ipa = document.getElementById("ipa").value;
+            p12 = document.getElementById("p12").value;
+            mobileprovision = document.getElementById("mobile").value;
+            password = document.getElementById("password").value;                        
+            window.open("https://sign.starfiles.co/?ipa=" + ipa + "&p12=" + p12 + "&mobileprovision=" + mobileprovision + "&password=" + password + "&redirect=true","_self")
+        }
+    </script>
+</body>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+    <body>
+       <div class="nav">	
+    <a href="home.html" class="none">house_fill</a>
+<a href="sections.html" class="none">rectangle_stack_fill</a>
+<a href="signer.html " class="current">pencil_outline</a>
+<a href="search.html" class="none">search_fill</a>
+<a href="settings.html " class="none">gear</a>
+</div>
+<div class="topbar">Signer</div>
+</html>
