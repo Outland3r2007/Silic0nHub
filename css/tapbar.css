@@ -1,0 +1,38 @@
+@supports (
+  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
+) {
+  .nav {
+    font-family: Framework7 Icons;
+    justify-content: center;
+    position: fixed;
+    box-shadow: 1px 2px 10px rgba(255,255,255, 0.9);
+    bottom: 0px;
+    z-index: 99;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin: 5% auto;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 1px;
+    border-width: 1px;
+    left: 0;
+    right: 0;
+    width: 75%;
+    max-width: 400px;
+    background: linear-gradient(45deg, rgba((45, 85, 255);, 1) 0%, rgba(0, 0, 0) 100%);
+    border-radius: 40px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
+.nav a {
+font-size: 35px;
+margin: 10px;
+}
+.nav a.current {
+color: #3E84F6;
+}
+.nav a.none {
+color: #fff;
+}
